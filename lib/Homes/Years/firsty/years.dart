@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/main.dart';
-import 'package:easy_pdf_viewer/easy_pdf_viewer.dart';
 
 class Years extends StatelessWidget {
   String title;

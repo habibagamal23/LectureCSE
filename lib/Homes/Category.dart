@@ -39,9 +39,9 @@ class Category extends StatelessWidget {
 
             borderRadius: isright? BorderRadius.only(topLeft:Radius.circular(20),
                 topRight:Radius.circular(20)
-                ,bottomRight: Radius.circular(20), bottomLeft: Radius.circular(0))
+                ,bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20))
                 : BorderRadius.only(topLeft:Radius.circular(20),topRight:Radius.circular(20) ,
-                bottomRight: Radius.circular(0), bottomLeft: Radius.circular(20))
+                bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20))
         ),
 
         child: Row(
@@ -79,9 +79,7 @@ class Category extends StatelessWidget {
     else   if(postion==4){
       Navigator.pushNamed(context, FourthYear.RouteName);
     }
-    else   if(postion==5) {
-      Navigator.pushNamed(context, InfoEng.RouteName);
-    }
+
 
     }
 

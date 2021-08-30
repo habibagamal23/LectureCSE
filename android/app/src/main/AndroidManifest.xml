@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lecture_azhar">
    <application
-        android:label="lecture_azhar"
-        android:icon="@mipmap/ic_launcher">
+        android:label="lectureCSE"
+        android:icon="@mipmap/sc">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

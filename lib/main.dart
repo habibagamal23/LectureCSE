@@ -10,12 +10,12 @@ void main() {
   runApp(MyApp());
 }
 class mythem{
-  static var lightwhite  = Color.fromRGBO(248, 250, 246, 1.0);
-  static var yellow  =   Color.fromRGBO(246, 246, 136, 1.0);
+  static var lightwhite  = Color.fromRGBO(246, 247, 248, 1.0);
+  static var yellow  =   Color.fromRGBO(154, 206, 235, 1.0);
   static var black =   Color.fromRGBO(17, 17, 17, 1.0);
   static var white = Colors.white;
   static var orange = Color.fromRGBO(233, 105, 44, 1.0);
-  static var ko7ly = Color.fromRGBO(0, 64, 64, 1.0);
+  static var ko7ly = Color.fromRGBO(0, 123, 167, 1.0);
 
 
 
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
 
 
       } ,
-      initialRoute:    HomeScreen.RouteName ,
+      initialRoute: HomeScreen.RouteName ,
     );
 
   }
