@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_azhar/Homes/Years/firsty/lec.dart';
 import 'package:lecture_azhar/main.dart';
 
 class Years extends StatelessWidget {
@@ -11,7 +12,7 @@ class Years extends StatelessWidget {
     return SafeArea(
       child: InkWell(
         onTap: (){
-
+          onItemClick(context);
         },
         child: Container(
             height: 100,
@@ -47,5 +48,13 @@ class Years extends StatelessWidget {
 
 
 
+  onItemClick(BuildContext context){
+    //navigate to a new screen
+    if(postion==8){
+      Navigator.pushNamed(context, Lecture.RouteName);
+    }
+
+
+}
 
 }

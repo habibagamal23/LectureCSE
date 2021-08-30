@@ -36,7 +36,7 @@ class _InfoEngState extends State<InfoEng> {
               ),
             ),
           ],
-          toolbarHeight: 100,
+          toolbarHeight: 90,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(30),
@@ -47,29 +47,23 @@ class _InfoEngState extends State<InfoEng> {
           title: Column(
             children: [
               Text(
-                "Home",
+                "Info About CSE",
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: mythem.white),
               ),
               SizedBox(
-                height: 5,
+                height: 8,
               ),
               Text(
-                "This ِapp is for students in computer engineering for the first,",
+                "This ِapp is for students in computer engineering ",
                 style: TextStyle(
                     fontSize: 7,
                     fontWeight: FontWeight.normal,
                     color: mythem.white),
               ),
-              Text(
-                " second, third and fourth years only",
-                style: TextStyle(
-                    fontSize: 7,
-                    fontWeight: FontWeight.normal,
-                    color: mythem.white),
-              ),
+
             ],
           ),
           backgroundColor: mythem.ko7ly,
@@ -77,7 +71,7 @@ class _InfoEngState extends State<InfoEng> {
         body: Container(
 
           child: SfPdfViewer.asset(
-          'assets/pdf/cv.pdf',
+          'assets/pdf/infodeveloper.pdf',
           enableDoubleTapZooming: true ,
           ),
         ));

@@ -26,11 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/images/10.jpg',
                 ),
-                maxRadius: 40,
+                maxRadius: 30,
               ),
             ),
           ],
-          toolbarHeight: 100,
+          toolbarHeight: 80,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
 

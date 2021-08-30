@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/Homes/Years/firsty/FirstYear.dart';
+import 'package:lecture_azhar/Homes/Years/firsty/lec.dart';
 import 'package:lecture_azhar/Homes/Years/fourthy/Fourth_year.dart';
 import 'package:lecture_azhar/Homes/Years/Info_Engi.dart';
 import 'package:lecture_azhar/Homes/Years/secyear/Sec_year.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         ThirdYear.RouteName: (context)=>ThirdYear(),
         FourthYear.RouteName: (context)=>FourthYear(),
        InfoEng.RouteName: (context)=> InfoEng(),
-
+        Lecture.RouteName :(context)=> Lecture(),
 
       } ,
       initialRoute: HomeScreen.RouteName ,

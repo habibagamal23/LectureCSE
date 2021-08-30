@@ -43,7 +43,9 @@ class Homepage extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
+                    Spacer(flex: 1,),
                     Expanded(
+                      flex: 3,
                         child: Icon(
                       Icons.computer_rounded,
                       color: mythem.white,
