@@ -21,46 +21,43 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           actions: [
-        Padding(
-              padding: const EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(8),
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/10.jpg',
+                backgroundImage: AssetImage(
+                  "assets/images/log.jpeg",
                 ),
-                maxRadius: 30,
+                maxRadius: 41,
               ),
             ),
           ],
-          toolbarHeight: 80,
+          toolbarHeight:  MediaQuery.of(context).size.height/7,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-
-            bottomRight: Radius.circular(30),
-            bottomLeft: Radius.circular(30),
+            bottomRight: Radius.circular(8),
+            bottomLeft: Radius.circular(8),
           )),
           elevation: 3,
-          centerTitle: false,
+          centerTitle: true,
           title: Column(
             children: [
               Text(
                 "Home",
                 style: TextStyle(
-                    fontSize: 30, fontWeight: FontWeight.bold, color: mythem.white),
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: mythem.white),
               ),
-          SizedBox(height: 5,)
-            ,
+              SizedBox(
+                height: 5,
+              ),
               Text(
-                "This ِapp is for students in computer engineering for the first,",
+                "This ِapp is for students in computer engineering ",
                 style: TextStyle(
-                    fontSize: 7, fontWeight: FontWeight.normal, color: mythem.white),
+                    fontSize: 7,
+                    fontWeight: FontWeight.normal,
+                    color: mythem.white),
               ),
-
-
-            Text(
-            " second, third and fourth years only",
-            style: TextStyle(
-            fontSize: 7, fontWeight: FontWeight.normal, color: mythem.white),
-      ),
-
             ],
           ),
           backgroundColor: mythem.ko7ly,
@@ -71,7 +68,6 @@ class _HomeScreenState extends State<HomeScreen> {
           barBackgroundColor: mythem.white,
           tabs: [
             TabData(iconData: Icons.home, title: "Home"),
-            TabData(iconData: Icons.search, title: "Search"),
             TabData(iconData: Icons.account_circle, title: "Me")
           ],
           onTabChangedListener: bottom_nav_selected,
@@ -85,8 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
     if (selectedIndex == 0) {
       return Homepage();
     } else if (selectedIndex == 1) {
-      Text(" Serch");
-    } else if (selectedIndex == 2) {
       return myInfo();
     }
     return Text(" ");

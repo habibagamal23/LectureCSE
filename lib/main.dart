@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/Homes/Years/firsty/FirstYear.dart';
-import 'package:lecture_azhar/Homes/Years/firsty/lec.dart';
 import 'package:lecture_azhar/Homes/Years/fourthy/Fourth_year.dart';
-import 'package:lecture_azhar/Homes/Years/Info_Engi.dart';
 import 'package:lecture_azhar/Homes/Years/secyear/Sec_year.dart';
 import 'package:lecture_azhar/Homes/Years/thirdy/Thir_year.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:device_preview/device_preview.dart';
+import 'SplachScreen.dart';
 
-import 'Homes/HomeScreen.dart';
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(
+      DevicePreview(
+          builder: (context) => MyApp()));
 }
-class mythem{
-  static var lightwhite  = Color.fromRGBO(246, 247, 248, 1.0);
-  static var yellow  =   Color.fromRGBO(154, 206, 235, 1.0);
-  static var black =   Color.fromRGBO(17, 17, 17, 1.0);
+
+class mythem {
+  static var lightwhite = Color.fromRGBO(126, 223, 253, 1.0);
   static var white = Colors.white;
-  static var orange = Color.fromRGBO(233, 105, 44, 1.0);
-  static var ko7ly = Color.fromRGBO(0, 123, 167, 1.0);
-
-
-
-
-
+  static var orange = Color.fromRGBO(43, 143, 182, 1.0);
+  static var ko7ly = Color.fromRGBO(14, 76, 146, 1.0);
 }
 
 class MyApp extends StatelessWidget {
@@ -29,21 +27,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context), // Add the locale here
+      builder: DevicePreview.appBuilder,
+
       debugShowCheckedModeBanner: false,
-
       title: 'University lectures',
-      routes:{
-     HomeScreen.RouteName : (context)=>HomeScreen(),
-        FirstYear.RouteName: (context)=>FirstYear(),
-        secondYear.RouteName: (context)=> secondYear(),
-        ThirdYear.RouteName: (context)=>ThirdYear(),
-        FourthYear.RouteName: (context)=>FourthYear(),
-       InfoEng.RouteName: (context)=> InfoEng(),
-        Lecture.RouteName :(context)=> Lecture(),
-
-      } ,
-      initialRoute: HomeScreen.RouteName ,
+      routes: {
+        SplashScreen.RouteName: (context) => SplashScreen(),
+        FirstYear.RouteName: (context) => FirstYear(),
+        secondYear.RouteName: (context) => secondYear(),
+        ThirdYear.RouteName: (context) => ThirdYear(),
+        FourthYear.RouteName: (context) => FourthYear(),
+      },
+      initialRoute: SplashScreen.RouteName,
     );
-
   }
 }

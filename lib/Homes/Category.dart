@@ -10,77 +10,75 @@ class Category extends StatelessWidget {
   var icon;
   bool isright;
   int postion;
-  Category( this.title,  this.isright, this.icon, this.postion);
+
+  Category(
+    this.title,
+    this.isright,
+    this.icon,
+    this.postion,
+  );
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         onItemClick(context);
-      }
-      ,
+      },
       child: Container(
-        height: 100,
+        height:  MediaQuery.of(context).size.height/7,
         width: double.infinity,
+        padding: EdgeInsets.all(6),
+        margin: EdgeInsets.all(6),
+        decoration: BoxDecoration(
+            gradient:
+                new LinearGradient(colors: [mythem.ko7ly, mythem.lightwhite]),
+            //  color: color1,
 
-        padding: EdgeInsets.all(15),
-        margin: EdgeInsets.all(15),
-
-        decoration:  BoxDecoration(
-            gradient: new LinearGradient(
-                colors: [
-                  mythem.ko7ly,
-                  mythem.yellow
-
-                ]
-            ),
-         // color: color1,
-
-            borderRadius: isright? BorderRadius.only(topLeft:Radius.circular(20),
-                topRight:Radius.circular(20)
-                ,bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20))
-                : BorderRadius.only(topLeft:Radius.circular(20),topRight:Radius.circular(20) ,
-                bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20))
-        ),
-
+            borderRadius: isright
+                ? BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20))
+                : BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20))),
         child: Row(
-
           children: [
             Padding(
-              padding: const EdgeInsets.all(15),
-              child: Text(title, style: TextStyle(
-                  fontSize: 23,
-                  color:mythem.white,
-                fontWeight: FontWeight.bold
-              ),),
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                title,
+                style: TextStyle(
+                    fontSize: 23,
+                    color: mythem.white,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
-            Expanded(child: Icon( icon,color: mythem.white,size: 50.0,)),
-
-
+            Expanded(
+                child: Icon(
+              icon,
+              color: mythem.white,
+              size: 50.0,
+            )),
           ],
         ),
-
       ),
     );
   }
 
-   onItemClick(BuildContext context){
+  onItemClick(BuildContext context) {
     //navigate to a new screen
-    if(postion==1){
+    if (postion == 1) {
       Navigator.pushNamed(context, FirstYear.RouteName);
-    }
-   else   if(postion==2){
-      Navigator.pushNamed(context,secondYear.RouteName);
-    }
-    else   if(postion==3){
+    } else if (postion == 2) {
+      Navigator.pushNamed(context, secondYear.RouteName);
+    } else if (postion == 3) {
       Navigator.pushNamed(context, ThirdYear.RouteName);
-    }
-    else   if(postion==4){
+    } else if (postion == 4) {
       Navigator.pushNamed(context, FourthYear.RouteName);
     }
-
-
-    }
-
+  }
 }
-

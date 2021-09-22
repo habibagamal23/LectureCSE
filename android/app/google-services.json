@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128685081436",
+    "project_id": "lecture-eecs",
+    "storage_bucket": "lecture-eecs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128685081436:android:345824c482b526f7903799",
+        "android_client_info": {
+          "package_name": "com.example.lecture_azhar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128685081436-q4t8tcma8sq1e89i0llvi123dcdo7og0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3c-t_8Rb1fLtqiBtejmBlnV5WGKKVFx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128685081436-q4t8tcma8sq1e89i0llvi123dcdo7og0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

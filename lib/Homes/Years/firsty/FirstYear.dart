@@ -13,13 +13,13 @@ class FirstYear extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.all(8.0),
            child: CircleAvatar(
-             backgroundImage: AssetImage("assets/images/10.jpg",
+             backgroundImage: AssetImage("assets/images/log.jpeg",
              ),
              maxRadius: 40,
            ),
          ),
        ],
-       toolbarHeight: 100,
+       toolbarHeight:  MediaQuery.of(context).size.height/7,
        shape: RoundedRectangleBorder(
            borderRadius: BorderRadius.only(
 
@@ -35,7 +35,7 @@ class FirstYear extends StatelessWidget {
              style: TextStyle(
                  fontSize: 20, fontWeight: FontWeight.bold, color: mythem.white),
            ),
-           SizedBox(height: 5,)
+           SizedBox(height: 3,)
            ,
            Text(
              "Lectures & Doctors' books ",
@@ -57,14 +57,15 @@ class FirstYear extends StatelessWidget {
      child: Text("First Term "
        ,style: TextStyle(
            fontSize: 25,
-           fontWeight: FontWeight.bold
+           fontWeight: FontWeight.bold,
+           color: mythem.ko7ly
        ),
      ),
    ),
     Row(
       children: [
         Spacer(),
-        Years("Electronics", 1),
+        Years("Electronics1", 1),
         Years("Electrical Circuits", 2),
         Spacer(),
       ],
@@ -80,8 +81,8 @@ class FirstYear extends StatelessWidget {
     Row(
       children: [
         Spacer(),
-        Years("English", 5),
-        Years("Doctors' books ", 6),
+        Years("Math1", 5),
+        Years("Linkes videos ", 6),
         Spacer(),
       ],
     ),
@@ -91,7 +92,8 @@ class FirstYear extends StatelessWidget {
       child: Text("Second Term "
         ,style: TextStyle(
             fontSize: 25,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
+            color: mythem.ko7ly
         ),
       ),
     ),
@@ -106,7 +108,7 @@ class FirstYear extends StatelessWidget {
     Row(
       children: [
         Spacer(),
-        Years("OOP", 9),
+        Years("DataStructuer ", 9),
         Years("Electronics ", 10),
         Spacer(),
       ],

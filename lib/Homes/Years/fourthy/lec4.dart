@@ -1,66 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:lecture_azhar/showPdf/pdfpage.dart';
 import 'package:lecture_azhar/ApiFirebase/apifirebase.dart';
 import 'package:lecture_azhar/main.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-
-class InfoEng extends StatefulWidget {
-  static final String RouteName = "InfoEng";
-
+import 'package:lecture_azhar/showPdf/pdfpage.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+class Lecture4 extends StatefulWidget {
+  String pathpdf;
+  Lecture4(this.pathpdf);
   @override
-  _InfoEngState createState() => _InfoEngState();
+  _Lecture4State createState() => _Lecture4State();
 }
 
-class _InfoEngState extends State<InfoEng> {
+class _Lecture4State extends State<Lecture4> {
   late Future<List<FirebaseFile>> futureFiles;
-  firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
+
+
   @override
   void initState() {
     super.initState();
-    futureFiles = FirebaseApi.listAll('3st/automata/');
+    futureFiles = FirebaseApi.listAll(widget.pathpdf);
   }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
                 backgroundImage: AssetImage(
-                  'assets/images/log.jpeg',
+                  "assets/images/log.jpeg",
                 ),
-                maxRadius: 41,
+                maxRadius: 40,
               ),
             ),
           ],
-          toolbarHeight: 90,
+          toolbarHeight:  MediaQuery.of(context).size.height/7,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(30),
-            bottomLeft: Radius.circular(30),
-          )),
+                bottomRight: Radius.circular(30),
+                bottomLeft: Radius.circular(30),
+              )),
           elevation: 3,
           centerTitle: false,
           title: Column(
             children: [
               Text(
-                "Info About EECS",
+                "Lectures",
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: mythem.white),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Text(
-                "This ِapp is for students in computer engineering ",
-                style: TextStyle(
-                    fontSize: 7,
-                    fontWeight: FontWeight.normal,
                     color: mythem.white),
               ),
             ],
@@ -100,43 +88,41 @@ class _InfoEngState extends State<InfoEng> {
               }
             }));
   }
-
-  Widget buildFile(BuildContext context, FirebaseFile file) => ListTile(
-        leading: Container(
-            width: 40, height: 40, child:Icon(
-          Icons.picture_as_pdf,
-          color: mythem.ko7ly,
-        ), ),
-        title: Text(
-          file.name,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            decoration: TextDecoration.underline,
-            color: mythem.ko7ly,
-          ),
-        ),
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PdfPage(file: file),
-        )),
-      );
-
   Widget buildHeader(int length) => ListTile(
-        tileColor: mythem.white,
-        leading: Container(
-          width: 52,
-          height: 52,
-          child: Icon(
-            Icons.file_copy,
-            color: mythem.ko7ly,
-          ),
-        ),
-        title: Text(
-          '$length Files',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            color: mythem.ko7ly,
-          ),
-        ),
-      );
+    tileColor: mythem.white,
+    leading: Container(
+      width: 52,
+      height: 52,
+      child: Icon(
+        Icons.file_copy,
+        color: mythem.ko7ly,
+      ),
+    ),
+    title: Text(
+      '$length Files',
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 20,
+        color: mythem.ko7ly,
+      ),
+    ),
+  );
+  Widget buildFile(BuildContext context, FirebaseFile file) => ListTile(
+    leading: Container(
+        width: 60, height: 60, child:Icon(
+      Icons.picture_as_pdf,
+      color: mythem.ko7ly,
+    ),),
+    title: Text(
+      file.name,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.underline,
+        color: mythem.ko7ly,
+      ),
+    ),
+    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => PdfPage(file: file),
+    )),
+  );
 }

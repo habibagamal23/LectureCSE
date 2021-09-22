@@ -13,19 +13,19 @@ class secondYear extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/10.jpg",
+              backgroundImage: AssetImage(
+                "assets/images/log.jpeg",
               ),
               maxRadius: 40,
             ),
           ),
         ],
-        toolbarHeight: 100,
+        toolbarHeight:  MediaQuery.of(context).size.height/7,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
-
-              bottomRight: Radius.circular(30),
-              bottomLeft: Radius.circular(30),
-            )),
+          bottomRight: Radius.circular(30),
+          bottomLeft: Radius.circular(30),
+        )),
         elevation: 3,
         centerTitle: false,
         title: Column(
@@ -33,95 +33,90 @@ class secondYear extends StatelessWidget {
             Text(
               "Second year CSE",
               style: TextStyle(
-                  fontSize: 20, fontWeight: FontWeight.bold, color: mythem.white),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: mythem.white),
             ),
-            SizedBox(height: 5,)
-            ,
+            SizedBox(
+              height: 5,
+            ),
             Text(
               "Lectures & Doctors' books ",
               style: TextStyle(
-                  fontSize: 7, fontWeight: FontWeight.normal, color: mythem.white),
+                  fontSize: 7,
+                  fontWeight: FontWeight.normal,
+                  color: mythem.white),
             ),
-
           ],
         ),
         backgroundColor: mythem.ko7ly,
       ),
-      body: ListView (
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.all(8),
-            child: Text("First Term "
-              ,style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold
-              ),
+            child: Text(
+              "First Term ",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: mythem.ko7ly),
             ),
           ),
           Row(
             children: [
               Spacer(),
-              syear("Electronics", 1),
-              syear("Electrical Circuits", 2),
+              syear("Signals ", 1),
+              syear("integrated Circuits", 2),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              syear("Programming", 3),
-              syear("Metrology & measuring", 4),
+              syear("Mathematics", 3),
+              syear("OOP", 4),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              syear("English", 3),
-              syear("Doctors' books ", 4),
+              syear("Linkes videos", 5),
+              syear("Sequential Logic  ", 6),
               Spacer(),
             ],
           ),
-
           Container(
             margin: EdgeInsets.all(8),
-            child: Text("Second Term "
-              ,style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold
-              ),
+            child: Text(
+              "Second Term ",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: mythem.ko7ly),
             ),
           ),
           Row(
             children: [
               Spacer(),
-              syear("Math", 7),
-              syear("Combinational logic ", 8),
+              syear("Numerical", 7),
+              syear(" Digital Circuits ", 8),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              syear("OOP", 9),
-              syear("Electronics ", 10),
+              syear("Control", 9),
+              syear("Machines ", 10),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              syear("eletromagntic fields", 11),
+              syear("Probability", 11),
               syear("Doctors' books ", 12),
               Spacer(),
             ],
           )
-
         ],
-
       ),
     );
   }
-
-
 }

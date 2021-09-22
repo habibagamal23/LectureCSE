@@ -13,13 +13,13 @@ class ThirdYear extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/10.jpg",
+              backgroundImage: AssetImage("assets/images/log.jpeg",
               ),
               maxRadius: 40,
             ),
           ),
         ],
-        toolbarHeight: 100,
+        toolbarHeight:  MediaQuery.of(context).size.height/7,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
 
@@ -57,30 +57,31 @@ class ThirdYear extends StatelessWidget {
               ,style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold
+                  ,color: mythem.ko7ly
               ),
             ),
           ),
           Row(
             children: [
               Spacer(),
-          tyear("Electronics", 1),
-              tyear("Electrical Circuits", 2),
+          tyear("Communications", 1),
+              tyear("Automata", 2),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              tyear("Programming", 3),
-              tyear("Metrology & measuring", 4),
+              tyear("Microprocessor", 3),
+              tyear("Queues", 4),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              tyear("English", 5),
-              tyear("Doctors' books ", 6),
+              tyear("Hadith", 5),
+              tyear("Linkes", 6),
               Spacer(),
             ],
           ),
@@ -91,29 +92,30 @@ class ThirdYear extends StatelessWidget {
               ,style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold
+                  ,color: mythem.ko7ly
               ),
             ),
           ),
           Row(
             children: [
               Spacer(),
-              tyear("Math", 7),
-              tyear("Combinational logic ", 8),
+              tyear("DataBase", 7),
+              tyear("Operating System ", 8),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              tyear("OOP", 9),
-              tyear("Electronics ", 10),
+              tyear("Power system", 9),
+              tyear("Sensors ", 10),
               Spacer(),
             ],
           ),
           Row(
             children: [
               Spacer(),
-              tyear("eletromagntic fields", 11),
+              tyear("Project Management", 11),
               tyear("Doctors' books ", 12),
               Spacer(),
             ],

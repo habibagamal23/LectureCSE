@@ -15,12 +15,12 @@ class Years extends StatelessWidget {
           onItemClick(context);
         },
         child: Container(
-            height: 100,
-            width: 150,
+          height: MediaQuery.of(context).size.height/7,
+          width: MediaQuery.of(context).size.height/5,
             padding: EdgeInsets.all(8),
             margin: EdgeInsets.all(8),
             decoration: BoxDecoration(
-              gradient: new LinearGradient(colors: [mythem.ko7ly, mythem.yellow]),
+              gradient: new LinearGradient(colors: [mythem.ko7ly,  mythem.lightwhite]),
               borderRadius: BorderRadius.circular(15), //border corner radius
               boxShadow: [
                 BoxShadow(
@@ -50,11 +50,79 @@ class Years extends StatelessWidget {
 
   onItemClick(BuildContext context){
     //navigate to a new screen
+    if(postion==1){
+      Navigator.of(context).push(MaterialPageRoute(
+
+      builder: (context) => Lecture("1st/Electronics")));
+
+}
+    if(postion==2){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/ElectricalCircuits")));
+
+    }
+    if(postion==3){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/Programming")));
+
+    }
+    if(postion==4){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/Metrology & measuring")));
+
+    }
+    if(postion==5){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("/1st/math1")));
+
+    }
+    if(postion==6){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("/1st/Linkesvideos")));
+
+    }
+    if(postion==7){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/Math")));
+
+    }
     if(postion==8){
-      Navigator.pushNamed(context, Lecture.RouteName);
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/Combinationallogic")));
+
     }
 
+    if(postion==9){
+      Navigator.of(context).push(MaterialPageRoute(
 
+          builder: (context) => Lecture("1st/DataStructuer")));
+
+    }
+    if(postion==10){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("/1st/Electronics")));
+
+    }
+    if(postion==11){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/eletromagnticfields")));
+
+    }
+    if(postion==12){
+      Navigator.of(context).push(MaterialPageRoute(
+
+          builder: (context) => Lecture("1st/Doctors' books")));
+
+    }
 }
 
 }
