@@ -4,15 +4,13 @@ import 'package:lecture_azhar/Homes/Years/fourthy/Fourth_year.dart';
 import 'package:lecture_azhar/Homes/Years/secyear/Sec_year.dart';
 import 'package:lecture_azhar/Homes/Years/thirdy/Thir_year.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:device_preview/device_preview.dart';
 import 'SplachScreen.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(
-      DevicePreview(
-          builder: (context) => MyApp()));
+  runApp(MyApp());
 }
 
 class mythem {
@@ -27,9 +25,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.locale(context), // Add the locale here
-      builder: DevicePreview.appBuilder,
-
       debugShowCheckedModeBanner: false,
       title: 'University lectures',
       routes: {
@@ -39,7 +34,7 @@ class MyApp extends StatelessWidget {
         ThirdYear.RouteName: (context) => ThirdYear(),
         FourthYear.RouteName: (context) => FourthYear(),
       },
-      initialRoute: SplashScreen.RouteName,
+      initialRoute: FirstYear.RouteName,
     );
   }
 }
