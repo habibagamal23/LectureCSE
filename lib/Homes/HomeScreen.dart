@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lecture_azhar/Homes/HomePage.dart';
 import 'package:lecture_azhar/main.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-
 import 'MyInfo/myInfo.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -62,33 +61,30 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           backgroundColor: mythem.ko7ly,
         ),
+
         bottomNavigationBar: FancyBottomNavigation(
           circleColor: mythem.ko7ly,
           inactiveIconColor: mythem.ko7ly,
           barBackgroundColor: mythem.white,
           tabs: [
             TabData(iconData: Icons.home, title: "Home"),
-            TabData(iconData: Icons.account_circle, title: "Me")
+            TabData(iconData: Icons.account_circle, title: "Me"),
           ],
-          onTabChangedListener: bottom_nav_selected,
+          onTabChangedListener:  (int position){
+      setState(() {
+      selectedIndex=position;
+      });
+      },
         ),
-        body: getMainView(),
+        body: getMainView[selectedIndex]
+
       ),
     );
   }
 
-  Widget getMainView() {
-    if (selectedIndex == 0) {
-      return Homepage();
-    } else if (selectedIndex == 1) {
-      return myInfo();
-    }
-    return Text(" ");
-  }
+  final List <Widget> getMainView =[
+    Homepage(),
+    myInfo(),
+  ];
 
-  void bottom_nav_selected(int position) {
-    setState(() {
-      selectedIndex = position;
-    });
-  }
 }

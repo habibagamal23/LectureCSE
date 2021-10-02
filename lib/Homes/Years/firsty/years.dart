@@ -53,7 +53,7 @@ class Years extends StatelessWidget {
     if(postion==1){
       Navigator.of(context).push(MaterialPageRoute(
 
-      builder: (context) => Lecture("1st/Electronics")));
+      builder: (context) => Lecture("/1st/electronics1")));
 
 }
     if(postion==2){

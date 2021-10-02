@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/main.dart';
 
-class myInfo extends StatelessWidget {
+class myInfo extends StatefulWidget {
+  @override
+  _myInfoState createState() => _myInfoState();
+}
+
+class _myInfoState extends State<myInfo> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        alignment: Alignment.center,
-        margin: EdgeInsets.all(20),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30), //border corner radius
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.all(20),
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30), //border corner radius
 
 
-        ),
-        child: Expanded(
+          ),
           child: Card(
 
             child: Column(

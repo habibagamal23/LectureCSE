@@ -36,6 +36,8 @@ class FourthYear extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: mythem.white),
+           
+
             ),
             SizedBox(
               height: 3,
@@ -57,12 +59,15 @@ class FourthYear extends StatelessWidget {
         child: ListView(
           children: [
             Container(
+              padding: EdgeInsets.all(15),
               margin: EdgeInsets.all(8),
               child: Text(
                 "First Term ",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold
                 ,color:  mythem.ko7ly
                 ),
+                textAlign: TextAlign.center,
+
               ),
             ),
             Row(
@@ -90,10 +95,13 @@ class FourthYear extends StatelessWidget {
               ],
             ),
             Container(
+              padding: EdgeInsets.all(15),
               margin: EdgeInsets.all(8),
               child: Text(
                 "Second Term ",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: mythem.ko7ly),
+                textAlign: TextAlign.center,
+
               ),
             ),
             Row(

@@ -53,6 +53,7 @@ class FirstYear extends StatelessWidget {
      body: ListView (
   children: [
      Container(
+       padding: EdgeInsets.all(15),
      margin: EdgeInsets.all(8),
      child: Text("First Term "
        ,style: TextStyle(
@@ -60,10 +61,12 @@ class FirstYear extends StatelessWidget {
            fontWeight: FontWeight.bold,
            color: mythem.ko7ly
        ),
+       textAlign: TextAlign.center,
      ),
    ),
     Row(
       children: [
+
         Spacer(),
         Years("Electronics1", 1),
         Years("Electrical Circuits", 2),
@@ -88,6 +91,7 @@ class FirstYear extends StatelessWidget {
     ),
 
     Container(
+      padding: EdgeInsets.all(15),
       margin: EdgeInsets.all(8),
       child: Text("Second Term "
         ,style: TextStyle(
@@ -95,6 +99,7 @@ class FirstYear extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: mythem.ko7ly
         ),
+        textAlign: TextAlign.center,
       ),
     ),
     Row(

@@ -4,8 +4,9 @@ import 'package:lecture_azhar/Homes/Years/fourthy/Fourth_year.dart';
 import 'package:lecture_azhar/Homes/Years/secyear/Sec_year.dart';
 import 'package:lecture_azhar/Homes/Years/thirdy/Thir_year.dart';
 import 'package:firebase_core/firebase_core.dart';
+//import 'Homes/HomeScreen.dart';
 import 'SplachScreen.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+//import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         ThirdYear.RouteName: (context) => ThirdYear(),
         FourthYear.RouteName: (context) => FourthYear(),
       },
-      initialRoute: FirstYear.RouteName,
+      initialRoute: SplashScreen.RouteName,
     );
   }
 }

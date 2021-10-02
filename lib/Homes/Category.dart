@@ -46,6 +46,7 @@ class Category extends StatelessWidget {
                     bottomRight: Radius.circular(20),
                     bottomLeft: Radius.circular(20))),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
               padding: const EdgeInsets.all(8),
@@ -57,12 +58,11 @@ class Category extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            Expanded(
-                child: Icon(
+            Icon(
               icon,
               color: mythem.white,
               size: 50.0,
-            )),
+            ),
           ],
         ),
       ),

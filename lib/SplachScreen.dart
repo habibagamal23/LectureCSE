@@ -33,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         elevation: 0.0,
       ),
       body: Center(
+
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -40,9 +41,10 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Spacer(),
               Container(
-                height: 180,
-                width: 150,
+                height: 280,
+                width: 250,
                 child: Image.asset(
                   "assets/images/log.jpeg",
                   height: MediaQuery.of(context).size.height,
@@ -50,8 +52,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   fit: BoxFit.fill,
                 ),
               ),
-
-              Spacer(flex: 1,),
               Text(
                 "Computer Engineering",
                 style: TextStyle(
@@ -60,7 +60,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontSize: 18),
                 textAlign: TextAlign.center,
               ),
-              Spacer(flex: 1,),
               Text(
                 "Al Azhar Universty",
                 style: TextStyle(
@@ -70,12 +69,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 textAlign: TextAlign.center,
               ),
               //  SizedBox(height: 250,),
-Spacer(flex: 5,),
+Spacer(flex: 4,),
               Text(
                 "Habiba Gamal",
                 style: TextStyle(
-                    color: Colors.blueGrey[80],
-                    fontWeight: FontWeight.bold,
+                    color:mythem.ko7ly,
+                    fontWeight: FontWeight.w200,
                     fontSize: 15),
                 textAlign: TextAlign.center,
               ),

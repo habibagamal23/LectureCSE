@@ -18,7 +18,7 @@ class _InfoEngState extends State<InfoEng> {
   @override
   void initState() {
     super.initState();
-    futureFiles = FirebaseApi.listAll('3st/automata/');
+    futureFiles = FirebaseApi.listAll('/info');
   }
 
   @override
