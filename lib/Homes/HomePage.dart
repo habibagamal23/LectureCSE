@@ -16,72 +16,36 @@ class Homepage extends StatelessWidget {
               height: 8,
             ),
             Category(
-              "First Ac ",
+              "First Ac",
               false,
               Icons.looks_one_rounded,
               1,
             ),
             Category(
-              "Sec Ac ",
+              "Sec Ac",
               true,
               Icons.looks_two_rounded,
               2,
             ),
             Category(
-              "Third Ac ",
+              "Third Ac",
               false,
               Icons.looks_3_rounded,
               3,
             ),
             Category(
-              "Fourth Ac ",
+              "Fourth Ac",
               true,
               Icons.looks_4_rounded,
               4,
             ),
-            InkWell(
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => InfoEng(),
-                  )),
-              child: Container(
-                height: 100,
-                width: double.infinity,
-                padding: EdgeInsets.all(6),
-                margin: EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [mythem.ko7ly, mythem.lightwhite]),
-                    // color: color1,
-
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Text(
-                        "CSE",
-                        style: TextStyle(
-                            fontSize: 23,
-                            color: mythem.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Spacer(
-                      flex: 1,
-                    ),
-                    Expanded(
-                        flex: 3,
-                        child: Icon(
-                          Icons.computer_rounded,
-                          color: mythem.white,
-                          size: 40.0,
-                        )),
-                  ],
-                ),
-              ),
+            Category(
+              "E E C S    ",
+              true,
+              Icons.category_rounded,
+              5,
             ),
+
           ],
         );
       },

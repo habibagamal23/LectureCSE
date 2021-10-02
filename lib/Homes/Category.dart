@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_azhar/Homes/Years/Info_Engi.dart';
 import 'package:lecture_azhar/Homes/Years/firsty/FirstYear.dart';
 import 'package:lecture_azhar/Homes/Years/fourthy/Fourth_year.dart';
 import 'package:lecture_azhar/Homes/Years/secyear/Sec_year.dart';
@@ -73,12 +74,45 @@ class Category extends StatelessWidget {
     //navigate to a new screen
     if (postion == 1) {
       Navigator.pushNamed(context, FirstYear.RouteName);
+      showDilogmassege("please sure you're Connect to the Internet", context);
+
     } else if (postion == 2) {
       Navigator.pushNamed(context, secondYear.RouteName);
+      showDilogmassege("please sure you're Connect to the Internet", context);
+
     } else if (postion == 3) {
       Navigator.pushNamed(context, ThirdYear.RouteName);
+      showDilogmassege("please sure you're Connect to the Internet", context);
+
     } else if (postion == 4) {
       Navigator.pushNamed(context, FourthYear.RouteName);
+      showDilogmassege("please sure you're Connect to the Internet", context);
+
     }
+    else if (postion == 5) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+          builder: (context) => InfoEng()));
+      showDilogmassege("please Connect to the Internet", context);
+    }
+  }
+  void showDilogmassege(String massge, BuildContext contextt) {
+    showDialog(
+        context: contextt,
+        builder: (buildercontext) {
+          return AlertDialog(
+            content: Text(massge),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(contextt);
+                  },
+                  child: Text("Ok", style: TextStyle(
+                      color: mythem.lightwhite
+                  ),))
+            ],
+          );
+        });
   }
 }
