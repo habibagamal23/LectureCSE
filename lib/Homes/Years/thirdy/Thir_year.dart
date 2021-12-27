@@ -40,7 +40,7 @@ class ThirdYear extends StatelessWidget {
             Text(
               "Lectures & Doctors' books ",
               style: TextStyle(
-                  fontSize: 7, fontWeight: FontWeight.normal, color: mythem.white),
+                  fontSize: 10, fontWeight: FontWeight.normal, color: mythem.white),
             ),
 
 

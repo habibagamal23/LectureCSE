@@ -15,34 +15,7 @@ class PdfPage extends StatefulWidget {
 }
 
 class _PdfPageState extends State<PdfPage> {
-  late OverlayEntry _overlayEntry;
 
-  void _showContextMenu(
-      BuildContext context, PdfTextSelectionChangedDetails details) {
-    final OverlayState? _overlayState = Overlay.of(context);
-    _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
-        top: details.globalSelectedRegion!.center.dy - 55,
-        left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: TextButton(
-          child: Text('Copy',
-              style: TextStyle(
-                fontSize: 17,
-              )),
-          onPressed: () {
-            Clipboard.setData(ClipboardData(text: details.selectedText));
-            _pdfViewerController.clearSelection();
-          },
-          style: TextButton.styleFrom(
-            primary: Colors.white,
-            backgroundColor: mythem.ko7ly,
-            elevation: 5,
-          ),
-        ),
-      ),
-    );
-    _overlayState!.insert(_overlayEntry);
-  }
 
   late PdfViewerController _pdfViewerController;
 
@@ -80,15 +53,6 @@ class _PdfPageState extends State<PdfPage> {
               widget.file.url,
               canShowScrollHead: true,
               enableDoubleTapZooming: true,
-              onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-                if (details.selectedText == null && _overlayEntry != null) {
-                  _overlayEntry.remove();
-                  _overlayEntry = null as OverlayEntry;
-                } else if (details.selectedText != null &&
-                    _overlayEntry == null) {
-                  _showContextMenu(context, details);
-                }
-              },
               controller: _pdfViewerController,
             )
           : Center(

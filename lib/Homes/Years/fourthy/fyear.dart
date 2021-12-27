@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_azhar/Linkes/FourthLink.dart';
 import 'package:lecture_azhar/main.dart';
 
 import 'lec4.dart';
@@ -83,7 +84,7 @@ class fyear extends StatelessWidget {
     if(postion==6){
       Navigator.of(context).push(MaterialPageRoute(
 
-          builder: (context) => Lecture4("/4st/linkesvedio")));
+          builder: (context) => Fourthlink()));
 
     }
     if(postion==7){

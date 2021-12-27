@@ -1,4 +1,4 @@
-package com.example.lecture_azhar
+package com.eecs.lecture_azhar
 
 import io.flutter.embedding.android.FlutterActivity
 

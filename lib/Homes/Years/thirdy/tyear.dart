@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/Homes/Years/thirdy/lec3.dart';
+import 'package:lecture_azhar/Linkes/ThirdLink.dart';
 import 'package:lecture_azhar/main.dart';
 
 class tyear extends StatelessWidget {
@@ -83,7 +84,7 @@ class tyear extends StatelessWidget {
     if(postion==6){
       Navigator.of(context).push(MaterialPageRoute(
 
-          builder: (context) => Lecture3("/3st/linkes")));
+          builder: (context) => ThiredLink()));
 
     }
     if(postion==7){
@@ -125,3 +126,4 @@ class tyear extends StatelessWidget {
     }
   }
 }
+

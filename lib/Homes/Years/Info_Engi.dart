@@ -57,7 +57,7 @@ class _InfoEngState extends State<InfoEng> {
                 height: 8,
               ),
               Text(
-                "This ِapp is for students in computer engineering ",
+                " Some information about the department  ",
                 style: TextStyle(
                     fontSize: 7,
                     fontWeight: FontWeight.normal,

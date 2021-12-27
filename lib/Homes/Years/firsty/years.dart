@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_azhar/Homes/Years/firsty/lec.dart';
+import 'package:lecture_azhar/Linkes/FirstLink.dart';
 import 'package:lecture_azhar/main.dart';
 
 class Years extends StatelessWidget {
@@ -83,7 +84,7 @@ class Years extends StatelessWidget {
     if(postion==6){
       Navigator.of(context).push(MaterialPageRoute(
 
-          builder: (context) => Lecture("/1st/Linkesvideos")));
+          builder: (context) => Firstlink()));
 
     }
     if(postion==7){

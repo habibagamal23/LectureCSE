@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_azhar/Linkes/SecLink.dart';
 import 'package:lecture_azhar/main.dart';
 
 import 'lec2.dart';
@@ -75,7 +76,7 @@ class syear extends StatelessWidget {
     if(postion==5){
       Navigator.of(context).push(MaterialPageRoute(
 
-          builder: (context) => Lecture2("2st/linkesvedio")));
+          builder: (context) => Secondlink()));
 
     }
     if(postion==6){
